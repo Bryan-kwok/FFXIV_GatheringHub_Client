@@ -1,24 +1,26 @@
+import { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
+import characterData from "./data/character.json";
+import Header from './components/Header/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state ={
+    avatar: characterData.Character.Avatar,
+    charName: characterData.Character.Name
+  }
+  render(){
+    return(
+      <BrowserRouter>
+        <Header avatar = {this.state.avatar} charName ={this.state.charName}/>
+      </BrowserRouter>
+      // <div>
+      //   <img src={this.state.avatar} />
+      //   <h1>{this.state.charName}</h1>
+      // </div>
+    )
+  }
+  
 }
 
 export default App;
