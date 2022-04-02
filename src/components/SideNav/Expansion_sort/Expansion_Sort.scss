@@ -1,0 +1,18 @@
+
+li{
+    list-style-type: none;
+    
+}
+ul{
+    padding-left: 0;
+}
+
+.sort{
+    &__container{
+        margin-left: 30px;
+    }
+
+    &__checkbox{
+        margin-right: 15px;
+    }
+}
