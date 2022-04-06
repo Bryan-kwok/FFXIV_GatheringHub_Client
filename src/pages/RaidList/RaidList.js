@@ -7,14 +7,11 @@ class RaidList extends Component{
     
 
     render(){
-        // const instanceDetails = this.props.instanceDetails;
-        console.log(this.props.instanceDetails)
-        console.log(this.props.activeContent)
         return(
             
             <div className="raidPage__container">
-                <SideNav instanceDetails={this.props.instanceDetails}/>
-                <ContentDisplay activeContent={this.props.activeContent}/>
+                <SideNav instanceDetails={this.props.instanceDetails} updateFilters={this.props.updateFilters}/>
+                <ContentDisplay activeContent={this.props.activeContent} filterKeys = {this.props.filterKeys} filterValues={this.props.filterValues}/>
 
 
             </div>

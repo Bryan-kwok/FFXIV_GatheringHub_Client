@@ -10,14 +10,23 @@ import Deepdungeon_sort from "./Deepdungeon_sort/Deepdungeon_sort";
 class SideNav extends Component{
 
     checkValue = (event)=>{
-        console.log(event)
+        let parameters = event.target.name;
+        let splitParameters = parameters.split("__");
+        let checked = event.target.checked;
+
+        this.props.updateFilters(splitParameters,checked)
+        
+    }
+
+    handleSubmit = ()=>{
+        console.log("hello")
     }
 
 
     render(){
 
         return(
-            <form className="sideNav__container" id="sideNav__form">
+            <form className="sideNav__container" id="sideNav__form" onSubmit={this.handleSubmit}>
                 <h2 className="sideNav__title">Search Options</h2>
                 <Expansion_Sort checkValue={this.checkValue} />
                 <Dungeon_Sort instanceDetails={this.props.instanceDetails} />

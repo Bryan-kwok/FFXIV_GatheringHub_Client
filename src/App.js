@@ -1,10 +1,12 @@
 import { Component } from 'react';
 import { Route, Redirect, Switch, BrowserRouter } from "react-router-dom";
 import './style/global.scss';
+import axios from 'axios';
 import characterData from "./data/character.json";
 import Header from './components/Header/Header';
 import RaidList from "./pages/RaidList/RaidList";
-import axios from 'axios';
+import Footer from './components/Footer/Footer';
+
 
 
 
@@ -15,11 +17,37 @@ class App extends Component {
     instanceDetails: null,
     activeContent: null,
     filterKeys: [],
-    filterValues: []
+    filterValues: [],
   }
 
-  updateFilters = ()=>{
-    
+
+  updateFilters = (parameters,checked)=>{
+
+    if(checked){
+      this.setState({
+        filterKeys: [...this.state.filterKeys,parameters[0]],
+        filterValues: [...this.state.filterValues,parameters[1]]
+      })
+      
+    }else if (!checked){
+      let keys = [...this.state.filterKeys];
+      let values = [...this.state.filterValues];
+
+      const indexKeys = keys.indexOf(parameters[0]);
+      const indexValues = values.indexOf(parameters[1]);
+
+      if(indexKeys>-1){
+         keys.splice(indexKeys,1)
+      }
+      if(indexValues>-1){
+         values.splice(indexValues,1)
+      }
+
+      this.setState({
+        filterKeys: keys,
+        filterValues: values
+      })
+    }
   }
 
   getAllInstances = ()=>{
@@ -32,10 +60,7 @@ class App extends Component {
       })
       .catch(err=>{console.log(err)})
   }
-
-  filterContent = ()=>{
-
-  }
+ 
 
   getActiveContent = ()=>{
     axios
@@ -57,7 +82,6 @@ class App extends Component {
   }
 
 
-
   render(){
     if(this.state.instanceDetails===null || this.state.activeContent===null){
       return <main>Loading...</main>
@@ -67,8 +91,22 @@ class App extends Component {
       <BrowserRouter>
         <Header avatar = {this.state.avatar} charName ={this.state.charName}/>
         <Switch>
-          <Route path="/" exact render={(props)=>(<RaidList props={props} instanceDetails={this.state.instanceDetails} activeContent={this.state.activeContent}/>)}/>
+          <Route 
+            path="/" 
+            exact render={(props)=>(
+              <RaidList 
+                props={props} 
+                instanceDetails={this.state.instanceDetails} 
+                activeContent={this.state.activeContent}
+                updateFilters={this.updateFilters}
+                filterKeys = {this.state.filterKeys}
+                filterValues = {this.state.filterValues}
+                />
+                
+            )}
+          />
         </Switch>
+        <Footer/>
       </BrowserRouter>
     )
   }
@@ -76,3 +114,5 @@ class App extends Component {
 }
 
 export default App;
+
+//(this.state.filteredContent)? this.state.filteredContent: this.state.activeContent

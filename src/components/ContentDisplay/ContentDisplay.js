@@ -3,23 +3,32 @@ import "./ContentDisplay.scss";
 import ContentCards from "./ContentCards/ContentCards";
 import Searchbar from "./Searchbar/Searchbar";
 
-class ContentDisplay extends Component{
+function ContentDisplay (props){
 
-    data = this.props.activeContent
+    const data = props.activeContent
+
+    const keys = props.filterKeys;
+    const values = props.filterValues;
 
 
-    render(){
-        console.log(this.data)
+
+    
         return(
             <div className="contentDisplay__container">
-                <Searchbar data={this.data} />
+                <Searchbar data={data} />
                 <div className="contentCards__wrapper">
-                    {this.data.map(instance=>(<ContentCards instance={instance}/>))}                 
+                    {data
+                    .filter(instance=>{
+                        return keys.every(key=>{
+                            return values.includes(instance[key])
+                        })
+                    })
+                    .map(instance=>(<ContentCards instance={instance}/>))}                 
                 </div>
 
             </div>
         )
-    }
+    
 }
 
 export default ContentDisplay;
