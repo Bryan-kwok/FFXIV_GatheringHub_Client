@@ -1,6 +1,7 @@
 import "./Raids_sort.scss";
 import Instance_List from "../Dungeon_sort/Instance_List/Instance_List";
 import { Component } from "react";
+import raidsIcon from "../../../assets/raid_icon.png"
 
 
 class Raids_sort extends Component{
@@ -105,7 +106,10 @@ class Raids_sort extends Component{
         
         return(
             <div className="sort__container">
-                <h2 className="sort__title" onClick={this.handleVisible}>Raids</h2>
+                <div className="sort__titleIcon">
+                    <img className="sort__icon" src={raidsIcon} />
+                    <h2 className="sort__title" onClick={this.handleVisible}>Raids</h2>
+                </div>
                 {this.state.isVisible &&
                     <ul className="sort__list">
                         <li className="sort__expansions" key={"sortRaids__ARR"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_raid_ARR}>A Realm Reborn</h3></li>

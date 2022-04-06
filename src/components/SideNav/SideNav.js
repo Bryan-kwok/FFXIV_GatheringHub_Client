@@ -8,22 +8,25 @@ import Treasure_sort from "./Treasure_sort/Treasure_sort";
 import Deepdungeon_sort from "./Deepdungeon_sort/Deepdungeon_sort";
 
 class SideNav extends Component{
-    render(){
-        // console.log(this.props.instanceDetails)
 
-        // const {instanceDetails} = this.props.instanceDetails;
+    checkValue = (event)=>{
+        console.log(event)
+    }
+
+
+    render(){
 
         return(
-            <div className="sideNav__container">
+            <form className="sideNav__container" id="sideNav__form">
                 <h2 className="sideNav__title">Search Options</h2>
-                <Expansion_Sort/>
-                <Dungeon_Sort instanceDetails={this.props.instanceDetails}/>
+                <Expansion_Sort checkValue={this.checkValue} />
+                <Dungeon_Sort instanceDetails={this.props.instanceDetails} />
                 <Trials_sort instanceDetails={this.props.instanceDetails}/>
                 <Raids_sort instanceDetails={this.props.instanceDetails}/>
                 <Treasure_sort instanceDetails={this.props.instanceDetails}/>
                 <Deepdungeon_sort instanceDetails={this.props.instanceDetails}/>
 
-            </div>
+            </form>
 
 
         )

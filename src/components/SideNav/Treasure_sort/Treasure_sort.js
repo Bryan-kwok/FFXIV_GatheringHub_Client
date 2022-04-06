@@ -1,6 +1,7 @@
 import "./Treasure_sort.scss";
 import Instance_List from "../Dungeon_sort/Instance_List/Instance_List";
 import { Component } from "react";
+import treasureIcon from "../../../assets/treasurehunt_icon.png"
 
 class Treasure_sort extends Component{
     state={
@@ -104,7 +105,10 @@ class Treasure_sort extends Component{
         
         return(
             <div className="sort__container">
-                <h2 className="sort__title" onClick={this.handleVisible}>Treasure Hunt</h2>
+                <div className="sort__titleIcon">
+                    <img className="sort__icon" src={treasureIcon} />
+                    <h2 className="sort__title" onClick={this.handleVisible}>Treasure Hunt</h2>
+                </div>
                 {this.state.isVisible &&
                     <ul className="sort__list">
                         <li className="sort__expansions" key={"sortTreasureHunt__Heavensward"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_treasureHunt_Heavensward}>Heavensward</h3></li>

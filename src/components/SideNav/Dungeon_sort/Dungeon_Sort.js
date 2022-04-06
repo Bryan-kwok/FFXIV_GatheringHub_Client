@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "./Dungeon_Sort.scss";
 import Instance_List from "./Instance_List/Instance_List";
+import dungeonIcon from "../../../assets/dungeon_icon.png"
 
 class Dungeon_Sort extends Component{
     state={
@@ -104,7 +105,10 @@ class Dungeon_Sort extends Component{
         
         return(
             <div className="sort__container">
-                <h2 className="sort__title" onClick={this.handleVisible}>Dungeons</h2>
+                <div className="sort__titleIcon">
+                    <img className="sort__icon" src={dungeonIcon} />
+                    <h2 className="sort__title" onClick={this.handleVisible}>Dungeons</h2>
+                </div>
                 {this.state.isVisible &&
                     <ul className="sort__list">
                         <li className="sort__expansions" key={"sortDungeon__ARR"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_dungeon_ARR}>A Realm Reborn</h3></li>

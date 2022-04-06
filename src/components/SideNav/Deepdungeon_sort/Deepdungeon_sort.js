@@ -1,6 +1,7 @@
 import "./Deepdungeon_sort.scss";
 import Instance_List from "../Dungeon_sort/Instance_List/Instance_List";
 import { Component } from "react";
+import deepdungeon_icon from "../../../assets/deepdungeons_icon.png"
 
 class Deepdungeon_sort extends Component{
     state={
@@ -104,7 +105,10 @@ class Deepdungeon_sort extends Component{
         
         return(
             <div className="sort__container">
-                <h2 className="sort__title" onClick={this.handleVisible}>Deep Dungeons</h2>
+                <div className="sort__titleIcon">
+                    <img className="sort__icon" src={deepdungeon_icon} />
+                    <h2 className="sort__title" onClick={this.handleVisible}>Deep Dungeons</h2>
+                </div>
                 {this.state.isVisible &&
                     <ul className="sort__list">
                         <li className="sort__expansions" key={"sortdeepDungeon__Heavensward"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_deepdungeon_Heavensward}>Heavensward</h3></li>
