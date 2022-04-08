@@ -15,7 +15,12 @@ function ContentDisplay (props){
     
         return(
             <div className="contentDisplay__container">
-                <Searchbar data={data} />
+                <Searchbar data={data} 
+                showModalCreateEvent={props.showModalCreateEvent} 
+                handleModalCreateEvent={props.handleModalCreateEvent}
+                instanceDetails={props.instanceDetails}
+                
+                />
                 <div className="contentCards__wrapper">
                     {data
                     .filter(instance=>{

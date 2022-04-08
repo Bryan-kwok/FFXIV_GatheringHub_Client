@@ -11,7 +11,15 @@ class RaidList extends Component{
             
             <div className="raidPage__container">
                 <SideNav instanceDetails={this.props.instanceDetails} updateFilters={this.props.updateFilters}/>
-                <ContentDisplay activeContent={this.props.activeContent} filterKeys = {this.props.filterKeys} filterValues={this.props.filterValues}/>
+                <ContentDisplay 
+                    activeContent={this.props.activeContent} 
+                    filterKeys = {this.props.filterKeys} 
+                    filterValues={this.props.filterValues}
+                    showModalCreateEvent = {this.props.showModalCreateEvent}
+                    handleModalCreateEvent = {this.props.handleModalCreateEvent}
+                    instanceDetails={this.props.instanceDetails}
+                    
+                    />
 
 
             </div>

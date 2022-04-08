@@ -112,13 +112,13 @@ class Deepdungeon_sort extends Component{
                 {this.state.isVisible &&
                     <ul className="sort__list">
                         <li className="sort__expansions" key={"sortdeepDungeon__Heavensward"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_deepdungeon_Heavensward}>Heavensward</h3></li>
-                            {this.state.isVisible_Heavensward && this.filterByDeepDungeon("Heavensward").map((instance)=>(<Instance_List instance={instance} />))}
+                            {this.state.isVisible_Heavensward && this.filterByDeepDungeon("Heavensward").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}
                         <li className="sort__expansions" key={"sortdeepDungeon__Stormblood"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_deepdungeon_Stormblood}>Stormblood</h3></li>
-                            {this.state.isVisible_Stormblood && this.filterByDeepDungeon("Stormblood").map((instance)=>(<Instance_List instance={instance} />))}
+                            {this.state.isVisible_Stormblood && this.filterByDeepDungeon("Stormblood").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}
                         <li className="sort__expansions" key={"sortdeepDungeon__Shadowbringers"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_deepdungeon_Shadowbringers}>Shadowbringers</h3></li>
-                            {this.state.isVisible_Shadowbringers && this.filterByDeepDungeon("Shadowbringers").map((instance)=>(<Instance_List instance={instance} />))}
+                            {this.state.isVisible_Shadowbringers && this.filterByDeepDungeon("Shadowbringers").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}
                         <li className="sort__expansions" key={"sortdeepDungeon__Endwalker"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_deepdungeon_Endwalker}>Endwalker</h3></li>
-                            {this.state.isVisible_Endwalker && this.filterByDeepDungeon("Endwalker").map((instance)=>(<Instance_List instance={instance} />))}   
+                            {this.state.isVisible_Endwalker && this.filterByDeepDungeon("Endwalker").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}   
                     </ul>   
                 }
             </div>

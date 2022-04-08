@@ -18,6 +18,11 @@ class App extends Component {
     activeContent: null,
     filterKeys: [],
     filterValues: [],
+    showModalCreateEvent: false,
+  }
+
+  handleModalCreateEvent = ()=>{
+    (!this.state.showModalCreateEvent)? this.setState({showModalCreateEvent: true}):this.setState({showModalCreateEvent:false})
   }
 
 
@@ -101,6 +106,8 @@ class App extends Component {
                 updateFilters={this.updateFilters}
                 filterKeys = {this.state.filterKeys}
                 filterValues = {this.state.filterValues}
+                showModalCreateEvent = {this.state.showModalCreateEvent}
+                handleModalCreateEvent = {this.handleModalCreateEvent}
                 />
                 
             )}

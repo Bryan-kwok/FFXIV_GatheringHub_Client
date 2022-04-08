@@ -112,15 +112,15 @@ class Dungeon_Sort extends Component{
                 {this.state.isVisible &&
                     <ul className="sort__list">
                         <li className="sort__expansions" key={"sortDungeon__ARR"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_dungeon_ARR}>A Realm Reborn</h3></li>
-                            {this.state.isVisible_ARR && this.filterByDungeon("A Realm Reborn").map((instance)=>(<Instance_List instance={instance} />))}
+                            {this.state.isVisible_ARR && this.filterByDungeon("A Realm Reborn").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}
                         <li className="sort__expansions" key={"sortDungeon__Heavensward"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_dungeon_Heavensward}>Heavensward</h3></li>
-                            {this.state.isVisible_Heavensward && this.filterByDungeon("Heavensward").map((instance)=>(<Instance_List instance={instance} />))}
+                            {this.state.isVisible_Heavensward && this.filterByDungeon("Heavensward").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}
                         <li className="sort__expansions" key={"sortDungeon__Stormblood"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_dungeon_Stormblood}>Stormblood</h3></li>
-                            {this.state.isVisible_Stormblood && this.filterByDungeon("Stormblood").map((instance)=>(<Instance_List instance={instance} />))}
+                            {this.state.isVisible_Stormblood && this.filterByDungeon("Stormblood").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}
                         <li className="sort__expansions" key={"sortDungeon__Shadowbringers"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_dungeon_Shadowbringers}>Shadowbringers</h3></li>
                             {this.state.isVisible_Shadowbringers && this.filterByDungeon("Shadowbringers").map((instance)=>(<Instance_List instance={instance} />))}
                         <li className="sort__expansions" key={"sortDungeon__Endwalker"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_dungeon_Endwalker}>Endwalker</h3></li>
-                            {this.state.isVisible_Endwalker && this.filterByDungeon("Endwalker").map((instance)=>(<Instance_List instance={instance} />))}   
+                            {this.state.isVisible_Endwalker && this.filterByDungeon("Endwalker").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}   
                     </ul>   
                 }
             </div>

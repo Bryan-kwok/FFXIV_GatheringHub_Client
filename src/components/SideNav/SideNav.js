@@ -13,7 +13,7 @@ class SideNav extends Component{
         let parameters = event.target.name;
         let splitParameters = parameters.split("__");
         let checked = event.target.checked;
-
+        console.log(splitParameters,checked)
         this.props.updateFilters(splitParameters,checked)
         
     }
@@ -29,11 +29,11 @@ class SideNav extends Component{
             <form className="sideNav__container" id="sideNav__form" onSubmit={this.handleSubmit}>
                 <h2 className="sideNav__title">Search Options</h2>
                 <Expansion_Sort checkValue={this.checkValue} />
-                <Dungeon_Sort instanceDetails={this.props.instanceDetails} />
-                <Trials_sort instanceDetails={this.props.instanceDetails}/>
-                <Raids_sort instanceDetails={this.props.instanceDetails}/>
-                <Treasure_sort instanceDetails={this.props.instanceDetails}/>
-                <Deepdungeon_sort instanceDetails={this.props.instanceDetails}/>
+                <Dungeon_Sort instanceDetails={this.props.instanceDetails} checkValue={this.checkValue}/>
+                <Trials_sort instanceDetails={this.props.instanceDetails} checkValue={this.checkValue}/>
+                <Raids_sort instanceDetails={this.props.instanceDetails} checkValue={this.checkValue}/>
+                <Treasure_sort instanceDetails={this.props.instanceDetails} checkValue={this.checkValue}/>
+                <Deepdungeon_sort instanceDetails={this.props.instanceDetails} checkValue={this.checkValue}/>
 
             </form>
 

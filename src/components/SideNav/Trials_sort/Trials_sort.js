@@ -112,15 +112,15 @@ class Trials_sort extends Component{
                 {this.state.isVisible &&
                     <ul className="sort__list">
                         <li className="sort__expansions" key={"sortTrials__ARR"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_trial_ARR}>A Realm Reborn</h3></li>
-                            {this.state.isVisible_ARR && this.filterByTrials("A Realm Reborn").map((instance)=>(<Instance_List instance={instance} />))}
+                            {this.state.isVisible_ARR && this.filterByTrials("A Realm Reborn").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}
                         <li className="sort__expansions" key={"sortTrials__Heavensward"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_trial_Heavensward}>Heavensward</h3></li>
-                            {this.state.isVisible_Heavensward && this.filterByTrials("Heavensward").map((instance)=>(<Instance_List instance={instance} />))}
+                            {this.state.isVisible_Heavensward && this.filterByTrials("Heavensward").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}
                         <li className="sort__expansions" key={"sortTrials__Stormblood"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_trial_Stormblood}>Stormblood</h3></li>
-                            {this.state.isVisible_Stormblood && this.filterByTrials("Stormblood").map((instance)=>(<Instance_List instance={instance} />))}
+                            {this.state.isVisible_Stormblood && this.filterByTrials("Stormblood").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}
                         <li className="sort__expansions" key={"sortTrials__Shadowbringers"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_trial_Shadowbringers}>Shadowbringers</h3></li>
-                            {this.state.isVisible_Shadowbringers && this.filterByTrials("Shadowbringers").map((instance)=>(<Instance_List instance={instance} />))}
+                            {this.state.isVisible_Shadowbringers && this.filterByTrials("Shadowbringers").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}
                         <li className="sort__expansions" key={"sortTrials__Endwalker"}><h3 className="sort__expansionTitle" onClick={this.handleVisible_trial_Endwalker}>Endwalker</h3></li>
-                            {this.state.isVisible_Endwalker && this.filterByTrials("Endwalker").map((instance)=>(<Instance_List instance={instance} />))}   
+                            {this.state.isVisible_Endwalker && this.filterByTrials("Endwalker").map((instance)=>(<Instance_List instance={instance} checkValue={this.props.checkValue}/>))}   
                     </ul>   
                 }
             </div>
