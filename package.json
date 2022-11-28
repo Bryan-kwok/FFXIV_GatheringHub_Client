@@ -43,5 +43,5 @@
   "devDependencies": {
     "gh-pages": "^4.0.0"
   },
-  "homepage": "http://Bryan-kwok.github.io/FFXIV_GatheringHub_Client"
+  "homepage": "."
 }
