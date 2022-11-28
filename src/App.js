@@ -96,6 +96,9 @@ class App extends Component {
       <BrowserRouter>
         <Header avatar = {this.state.avatar} charName ={this.state.charName}/>
         <Switch>
+          <Route exact path="/FFXIV_GatheringHub_Client">
+            <Redirect to="/" />
+          </Route>
           <Route 
             path="/" 
             exact render={(props)=>(
