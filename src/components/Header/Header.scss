@@ -1,0 +1,58 @@
+
+.header{
+    
+    &__container{
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        background-color: rgb(22, 22, 22);
+        margin-bottom: 16px;
+    }
+    &__title{
+        
+        &-wrapper{
+            padding: 20px;
+            // border: 30px solid transparent;
+            // border-image: url(../../assets/fantasy-border-png-transparent.png) 20% round;
+        }
+    }
+    &__loginSection{
+        display: flex;
+        margin-left: auto;
+        margin-right: 30px;
+        align-items: center;
+    }
+    &__avatar{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+    &__raidList{
+        padding: 0 16px;
+        border-radius: 20px;
+    }
+    &__calender{
+        padding: 0 16px;
+        border-radius: 20px;
+    }
+    &__contactMe{
+        padding: 0 16px;
+        border-radius: 20px;
+    }
+    &__raidList:hover{
+        background-color: rgb(61, 61, 61);
+    }
+    &__calender:hover{
+        background-color: rgb(61, 61, 61);
+    }
+    &__contactMe:hover{
+        background-color: rgb(61, 61, 61);
+    }
+}
+
+
+
+a,u{
+    text-decoration: none;
+    color: white;
+}

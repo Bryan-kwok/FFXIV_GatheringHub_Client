@@ -1,0 +1,76 @@
+
+.card{
+
+    &__header{
+        display: flex;
+        align-items: center;
+    }
+    &__badges{
+        margin-left: auto;
+    }
+    &__header{
+        margin-bottom: 5px;
+    }
+    &__nameJobsWrapper{
+        margin-right: 32px;
+        min-width: 378px;
+    }
+    &__leader{
+        margin-bottom: 16px;
+    }
+
+    &__container{
+        display: flex;
+        margin-left: 16px;
+        padding: 16px 16px 16px 16px;
+        // border: 2px solid grey;
+        background-color: rgb(61, 61, 61);
+        border-radius: 8px;
+        margin-bottom: 32px;
+    }
+    &__container:hover{
+        border: 1px solid grey;
+    }
+    &__backgroundImage{
+        border-radius: 20px;
+        border: 1px solid white;
+        object-fit: cover;
+        
+        max-height: 122px;
+
+ 
+    }
+    &__jobRoles{
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+    &__timeWrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__partySetting{
+        min-width: 300px;
+    }
+
+    &__jobContainer{
+        margin-top: 10px;
+    }
+    &__timeSetting{
+        float: right;
+    }
+    &__timer-start{
+        width: 20px;
+        height: 20px;
+        margin-top: 5px;
+        filter: invert(44%) sepia(49%) saturate(2653%) hue-rotate(96deg) brightness(107%) contrast(113%);
+    }
+    &__timer-end{
+        width: 20px;
+        height: 20px;
+        margin-top: 5px;
+        filter: invert(14%) sepia(75%) saturate(4543%) hue-rotate(355deg) brightness(83%) contrast(121%);
+    }
+   
+}

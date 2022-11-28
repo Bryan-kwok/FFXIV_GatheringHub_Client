@@ -1,0 +1,46 @@
+
+.modalCreateEvent{
+    box-sizing: border-box;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+
+    &__container{
+        border: 2px solid white;
+        width: 40vw;
+        height: 40vw;
+        margin: auto;
+        padding: 32px;
+        background-color: rgb(141, 134, 122);
+    }
+
+    &__menuContainers{
+        display: block;
+    }
+
+    &__selectMenu{
+        display: block;
+        height: 36px;
+        width: 28%;
+        border-radius: 20px;
+        padding: 6px 16px;
+        box-sizing: border-box;
+    
+        font-size: 0.813rem;
+        line-height: 1.25rem;
+        font-family: "Helvetica";
+        font-weight: 600;
+    }
+    
+    &__displayContent{
+        width: 300px;
+        height: 200px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+    }
+}

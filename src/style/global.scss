@@ -1,5 +1,5 @@
-@use "./partial/fonts" as *;
-@use "./partial/mixin" as *;
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -131,6 +131,10 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+html{
+  color: white;
+    background-color: rgba(0, 0, 0, 0.87);
 }
 * {
   box-sizing: content-box;
