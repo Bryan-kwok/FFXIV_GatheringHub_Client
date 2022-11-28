@@ -57,7 +57,7 @@ class App extends Component {
 
   getAllInstances = ()=>{
     axios
-      .get("http://localhost:8080/instanceDetails")
+      .get("https://ffxiv-gathering-hub-server-eyjdfyta6-bryan-kwok.vercel.app/instanceDetails")
       .then(response=>{
         this.setState({
           instanceDetails: response.data
@@ -69,7 +69,7 @@ class App extends Component {
 
   getActiveContent = ()=>{
     axios
-      .get("http://localhost:8080/activeContent")
+      .get("https://ffxiv-gathering-hub-server-eyjdfyta6-bryan-kwok.vercel.app/activeContent")
       .then(response=>{
         this.setState({
           activeContent: response.data
