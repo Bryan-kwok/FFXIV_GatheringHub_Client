@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/FFXIV_GatheringHub_Client/static/css/main.eeca367d.css",
-    "main.js": "/FFXIV_GatheringHub_Client/static/js/main.e0121f7e.js",
-    "static/media/Helvetica.ttf": "/FFXIV_GatheringHub_Client/static/media/Helvetica.06113bf748ae7dc33e05.ttf",
-    "static/media/Helvetica-Bold.ttf": "/FFXIV_GatheringHub_Client/static/media/Helvetica-Bold.ed57aca7292971d8548c.ttf",
-    "index.html": "/FFXIV_GatheringHub_Client/index.html",
-    "static/media/search.svg": "/FFXIV_GatheringHub_Client/static/media/search.75390016eac0c84eb510.svg",
-    "main.eeca367d.css.map": "/FFXIV_GatheringHub_Client/static/css/main.eeca367d.css.map",
-    "main.e0121f7e.js.map": "/FFXIV_GatheringHub_Client/static/js/main.e0121f7e.js.map"
+    "main.css": "./static/css/main.197b2daa.css",
+    "main.js": "./static/js/main.e0121f7e.js",
+    "static/media/Helvetica.ttf": "./static/media/Helvetica.06113bf748ae7dc33e05.ttf",
+    "static/media/Helvetica-Bold.ttf": "./static/media/Helvetica-Bold.ed57aca7292971d8548c.ttf",
+    "index.html": "./index.html",
+    "static/media/search.svg": "./static/media/search.75390016eac0c84eb510.svg",
+    "main.197b2daa.css.map": "./static/css/main.197b2daa.css.map",
+    "main.e0121f7e.js.map": "./static/js/main.e0121f7e.js.map"
   },
   "entrypoints": [
-    "static/css/main.eeca367d.css",
+    "static/css/main.197b2daa.css",
     "static/js/main.e0121f7e.js"
   ]
 }
